@@ -1,0 +1,74 @@
+<app-header></app-header>
+<section class="pcv">
+  
+    <div class="right">
+        <div class="head">
+            <div class="image">
+                <div class="circle">
+                    <img [src]="url" alt="">
+                    </div>
+
+            </div>
+            <div class="nom">
+<p class="titre1">{{emp.nom}}</p>
+            </div>
+        
+              
+                      
+
+        </div>
+        <div class="body">
+            <div class="exp">
+           <div class="contact">
+            <p class="titre2">Contact</p>
+            <div class="re">
+           <div class="inputfield">
+            <i class='bx bxs-envelope'></i>
+<p>
+ {{emp.mail}}
+</p>
+           </div>
+      
+                        </div>
+           <div class="inputfield">
+            <i class='bx bxs-phone'></i>
+<p>
+{{emp.num}}
+</p>
+           </div>
+
+           </div>
+           <div class="experience">
+            <p class="titre2">
+                Experience
+            </p>
+            <p>
+             {{emp.exp}}
+                </p>
+             
+                <div class="cv" *ngIf="this.cv">
+                    <a href="assets/{{this.cv.titlefile}}" class="c">Voir C.V</a>
+                 </div>
+           </div>
+            </div>
+
+        </div>
+        <form [formGroup]="formsignin">
+            <div class="ajout">
+          
+                <p class="titre2">Ajoutez une offre</p>
+                <textarea name="" id="" cols="30" rows="3" formControlName="offre"></textarea>
+            </div>
+            <p class="error">{{result1}}</p>
+            <div class="b">
+               <input class="btn" type="button" value="envoyer" (click)="onsubmit()" >
+                        </div>
+                
+        </form>
+    
+
+
+    </div>
+
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<section>
+    <div class="image">
+        <img class="im" src="assets/jobv.png" alt="">
+    </div>
+    <div class="form">
+    
+    
+        <div class="donnee">
+              <form [formGroup]="formsignin"  class="form">
+             <div class="p1">
+              <div class="titre">
+                <h1>Inscrire 
+                  avec <br> &nbsp;&nbsp;&nbsp;<span>RestoJob</span>  </h1>
+              </div>
+              <div class="cinetnom">
+                <div class="cin">
+                  <label for="#">Cin</label>
+                  <div class="">
+                    <input type="number" placeholder="Cin" formControlName="cin">
+                   
+                  </div>
+                  <p class="m">{{result2}}</p>
+                </div>
+               
+                <div class="cin">
+                  <label for="#">Nom et prenom</label>
+                  <div>
+                    <input type="text" placeholder="Nom et prenom" formControlName="nom">
+                  </div>
+                  <p class="m">{{result1}}</p>
+                </div>
+               
+            </div>
+            <div class="email">
+              <label for="#">Email</label>
+              <div>
+                <input type="text" placeholder="Email" formControlName="email">
+              </div>
+            </div>
+            <p class="m">{{result3}}</p>
+            <div class="email">
+              <label for="#">Mot de passe</label>
+              <div>
+                <input type="password" placeholder="+6 caractere" formControlName="mp">
+              </div>
+            </div>
+<p class="m">{{result4}}</p>
+<div class="btn">
+  <button (click)="onsubmit()" ><i class='bx bx-right-arrow-alt'></i></button>
+</div>
+             </div>
+
+              </form>
+          </div>
+      
+    </div>
+
+</section>

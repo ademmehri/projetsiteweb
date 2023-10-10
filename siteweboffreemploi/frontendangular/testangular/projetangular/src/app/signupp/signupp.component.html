@@ -1,0 +1,137 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<section>
+    <div class="image">
+        <img class="im" src="assets/patron.png" alt="">
+    </div>
+    <div class="form">
+   
+      
+
+ 
+        <div class="donnee">
+              <form [formGroup]="formsignin"  class="form">
+             <div class="p1">
+              <div class="titre">
+                <h1>Inscrire 
+                  avec <br> &nbsp;&nbsp;&nbsp;<span>RestoJob</span>  </h1>
+              </div>
+              <div class="head">
+    
+                <div class="pp">
+                  <div class="circle">
+                  
+                    <img [src]="url"  alt="">
+                  
+                    </div>
+                
+                </div>
+                  
+               <div class="upload">
+              
+                <input name="file" id="file" class="inputfile"  type="file" (change)="onselectfile($event)"/>
+                <label for="file" class="file"><i class='bx bx-upload'></i> Choisie une image</label>
+               </div>
+              
+                 </div>
+                 <p class="sp">{{timg}}</p>
+    <div class="deux">
+      <div class="cinetnom">
+        <div class="cin">
+          <label for="#">Spécialité</label>
+          <div class="">
+            <select   (change)="onselecte($event)">
+              <option value="">Spécialité</option>
+              <option value="cafe">café</option>
+              <option value="resturant">Resturant</option>
+              <option value="Hotel">Hotel</option>
+            
+             
+             </select>
+           
+          </div>
+          <p class="m">{{result2}}</p>
+        </div>
+       
+        <div class="cin">
+          <label for="#">Nom et prenom</label>
+          <div>
+            <input type="text" placeholder="Nom entreprise" formControlName="nom">
+          </div>
+          <p class="m">{{result1}}</p>
+        </div>
+       
+    </div>
+    <div class="cinetnom">
+      <div class="cin">
+        <label for="#">Numero</label>
+        <div class="">
+          <input type="number" placeholder="numero" formControlName="numero">
+         
+        </div>
+        <p class="m">{{result5}}</p>
+      </div>
+     
+      <div class="cin">
+        <label for="#">Gouvernerat</label>
+        <div>
+          <select   (change)="onselect($event)" >
+            <option value="">Gouvernerat</option>
+            <option value="ariana">ariana</option>
+            <option value="ben aarous">ben aarous</option>
+            <option value="bizerte">bizerte</option>
+            <option value="Béja">Béja</option>
+            <option value="Gabès">Gabès</option>
+            <option value="Gafsa">Gafsa</option>
+            <option value="Jendouba">Jendouba</option>
+            <option value="Kairouan">Kairouan</option>
+            <option value="Kasserine">Kasserine</option>
+            <option value="Kébili">Kébili</option>
+            <option value="Le Kef">Le Kef</option>
+            <option value="Gafsa">Gafsa</option>
+            <option value="Mahdia">Mahdia</option>
+            <option value="La Manouba">La Manouba</option>
+            <option value="Médenine">Médenine</option>
+            <option value="Monastir">Monastir</option>
+            <option value="Nabeul">Nabeul</option>
+            <option value="Sfax">Sfax</option>
+            <option value="Sidi Bouzid">Sidi Bouzid</option>
+            <option value="Siliana">Siliana</option>
+            <option value="Sousse">Sousse</option>
+            <option value="Tozeur">Tozeur</option>
+            <option value="Tunis">Tunis</option>
+            <option value="Zaghouan">Zaghouan</option>
+           
+           </select>
+        </div>
+        <p class="m">{{result6}}</p>
+      </div>
+     
+  </div>
+    </div>
+            <div class="email">
+              <label for="#">Email</label>
+              <div>
+                <input type="text" placeholder="Email" formControlName="email">
+              </div>
+              <p class="m">{{result3}}</p>
+            </div>
+          
+            <div class="email">
+              <label for="#">Mot de passe</label>
+              <div>
+                <input type="password" placeholder="+6 caractere" formControlName="mp">
+              </div>
+            </div>
+<p class="m">{{result4}}</p>
+<div class="btn">
+  <button (click)="onsubmit()" >Insicription</button>
+</div>
+             </div>
+
+              </form>
+          </div>
+       
+    </div>
+
+</section>

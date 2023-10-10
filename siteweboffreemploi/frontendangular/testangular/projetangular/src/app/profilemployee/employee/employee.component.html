@@ -1,0 +1,111 @@
+<app-header></app-header>
+<section class="container">
+    <div class="profil">
+    <div class="head">
+        <div class="image">
+            <img [src]="url" alt="">
+            <div class="icon">
+                <span class="text">
+                    Update
+                   </span>
+               <a href="/updateemp/{{emp.cin}}"> <i class='bx bx-pencil pen'></i></a>
+              <a (click)="scroll()">  <i [style]="bcolor" class='bx bxs-bell pen'></i></a>
+                <span class="text">
+                  Déconnecter
+                   </span>
+                   <button (click)="logout()" class="c">  <i class='bx bx-exit pen'></i></button>
+         
+             
+        
+            </div>
+        </div>
+        <div class="nom">
+            <p>{{emp.nom}}</p>
+        </div>
+    </div>
+    <div class="info">
+        <div class="p1">
+            <div class="input">
+                <label for="#">Numéro de téléphone</label>
+                <p>{{emp.num}}</p>
+            </div>
+            <div class="input">
+                <label for="#">Email</label>
+                <p>{{emp.mail}}</p>
+            </div>
+        </div>
+        <div class="p2">
+            <h2>Données Personnelles</h2>
+            <div class="donnee">
+                <table>
+                    <tr>
+                        <td class="t">Nom</td>
+                        <td>{{emp.nom}}</td>
+                    </tr>
+                    <tr>
+                        <td class="t">Date de naissance</td>
+                        <td>{{emp.date}}</td>
+                    </tr>
+                    <tr>
+                        <td class="t">Sexe</td>
+                        <td>{{emp.sexe}}</td>
+                    </tr>
+                    <tr>
+                        <td class="t">Spécialité</td>
+                        <td>{{emp.specialite}}</td>
+                    </tr>
+                    <tr>
+                        <td class="t">Expérience</td>
+                        <td>{{emp.exp}}</td>
+                    </tr>
+                    <tr>
+                        <td class="t">Région</td>
+                        <td>{{emp.gouvernerat}}</td>
+                    </tr>
+                    <tr>
+                        <td class="t">City</td>
+                        <td>{{emp.city}}</td>
+                    </tr>
+                    <tr *ngIf="this.cv">
+                        <td class="t">Voir Cv</td>
+                        <td>
+                            <div class="cv" >
+                                <a href="assets/{{this.cv.titlefile}}" class="c">Voir C.V</a>
+                             </div>
+                        </td>
+                    </tr>
+                </table>
+              
+            </div>
+        </div>
+        <div class="p3">
+            <h2>Offres</h2>
+            <div class="offre">
+    
+        
+        <div class="c"id="offre">
+     <button class="b" *ngFor="let ent of listoff" (click)="consult(ent.id)">
+        <div class="card">
+            <div class="ico">
+             <div>
+                <img src="assets\{{ent.file.titlefile}}" alt="">
+             </div>
+            </div>
+            <p class="nomm">{{ent.nomcafe}}</p>
+        </div>
+ 
+     </button>
+     
+         </div>
+      
+        
+             
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</section>
+<app-footer></app-footer>

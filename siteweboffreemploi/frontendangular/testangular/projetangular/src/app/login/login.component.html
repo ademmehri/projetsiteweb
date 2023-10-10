@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<section>
+<div class="s">
+  <div class="image">
+    <img class="im" src="assets/jobv.png" alt="">
+</div>
+<div class="form">
+
+
+    <div class="donnee">
+          <form [formGroup]="formsignin"  class="form">
+            <div class="titre">
+              <img src="assets/finall.png" alt="hello">
+            </div>
+         <div class="p1">
+        <div class="email">
+          <label for="#">Email</label>
+          <div>
+            <input [style]="bgcol" type="text" placeholder="Email" formControlName="email">
+          </div>
+         
+        </div>
+      
+        <div class="email">
+      <div>
+            <label for="#">Mot de passe</label>
+      </div>
+          <div>
+            <input [style]="bgcol2" type="password" placeholder="+6 caractere" formControlName="mp">
+          </div>
+         
+        </div>
+
+<div class="a">
+  <a  (click)="motpasseoubliee()">mot passe oublié</a>
+</div>
+
+         </div>
+         <div class="btn">
+          <button (click)="onsubmit()" >Se connecter</button>
+        </div>
+          </form>
+      </div>
+    
+</div>
+</div>
+
+</section>

@@ -1,0 +1,131 @@
+<app-header></app-header>
+<section>
+    <div class="p1">
+        <div class="titre">
+<h1>
+    Détails personnels</h1>
+        </div>
+        <div class="donee">
+            <p>Ajoutez votre photo et vos informations personnelles pour augmenter votre visibilité lorsque les employeurs recherchent des CV.</p>
+        </div>
+
+    </div>
+    <div class="p2">
+        <div class="form">
+            <div class="head">
+           
+                <div class="circle">
+                    
+                    <img [src]="url"  alt="">
+                    
+                    </div>
+                  
+               <div class="upload">
+                <p class="nom">{{empl.nom}}</p>
+                <p class="mail">{{empl.mail}}</p>
+                <input name="file" id="file" class="inputfile"  type="file" (change)="onselectfile($event)"/>
+                <label for="file"><i class='bx bx-upload'></i> Choisie une image</label>
+               </div>
+            </div>
+            <p class="m">{{timg}}</p>
+            <body>
+                <form [formGroup]="formsignin">
+                <div class="region">
+                    <label for="#">Date de Naisance</label>
+                 <div class="cont">
+                    <input placeholder="date" type="date" (change)="onselecte($event)"  formControlName="date" >
+                 </div>
+                 <p class="m">{{result6}}</p>
+                </div>
+                <div class="region">
+                    <label for="#">Gouvernerat</label>
+                 <div class="cont">
+                    
+                    <select  name="select" (change)="onselectee($event)" >
+                        <option value="">Gouvernerat</option>
+                        <option value="ariana">ariana</option>
+                        <option value="ben aarous">ben aarous</option>
+                        <option value="bizerte">bizerte</option>
+                        <option value="Béja">Béja</option>
+                        <option value="Gabès">Gabès</option>
+                        <option value="Gafsa">Gafsa</option>
+                        <option value="Jendouba">Jendouba</option>
+                        <option value="Kairouan">Kairouan</option>
+                        <option value="Kasserine">Kasserine</option>
+                        <option value="Kébili">Kébili</option>
+                        <option value="Le Kef">Le Kef</option>
+                        <option value="Gafsa">Gafsa</option>
+                        <option value="Mahdia">Mahdia</option>
+                        <option value="La Manouba">La Manouba</option>
+                        <option value="Médenine">Médenine</option>
+                        <option value="Monastir">Monastir</option>
+                        <option value="Nabeul">Nabeul</option>
+                        <option value="Sfax">Sfax</option>
+                        <option value="Sidi Bouzid">Sidi Bouzid</option>
+                        <option value="Siliana">Siliana</option>
+                        <option value="Sousse">Sousse</option>
+                        <option value="Tozeur">Tozeur</option>
+                        <option value="Tunis">Tunis</option>
+                        <option value="Zaghouan">Zaghouan</option>
+                       
+                       </select>
+                 </div>
+                <p class="m">{{result1}}</p>
+                </div>
+                <div class="region">
+                    <label for="#">Région</label>
+                 <div class="cont">
+                    <input placeholder="Région" type="text" formControlName="region" >
+                 </div>
+                 <p class="m">{{result2}}</p>
+                </div>
+                <div class="region">
+                    <label for="#">Spécialité</label>
+                 <div class="cont">
+               <select name="select" (change)="onselect($event)" id="">
+                <option value="cuisiner">spécialité</option>
+                <option value="cuisiner">cuisinier</option>
+                <option value="serveur">serveur</option>
+                <option value="chefcuisinier">chefcuisinier</option>
+                <option value="gerant">gerant</option>
+               </select>
+                 </div>
+                 <p class="m">{{result5}}</p>
+                </div>
+                <div class="region">
+                    <label for="#">Numero</label>
+                 <div class="cont">
+                    <input placeholder="Numero" type="number" formControlName="numero" >
+                 </div>
+                 <p class="m">{{result3}}</p>
+                </div>
+                <div class="region">
+                    <label for="#">Experience</label>
+                 <div class="cont">
+                   <textarea name="x" id="" cols="30" rows="10" formControlName="exp"></textarea>
+                 </div>
+                 <p class="m">{{result4}}</p>
+                </div>
+                <div class="region">
+                    <label for="#">Gender</label>
+                 <div class="rad">
+                   <input type="radio" name="rad" checked formControlName="rad1" value="Homme"> <span>Homme</span>&nbsp;&nbsp;&nbsp;
+                   <input type="radio" name="rad" formControlName="rad1" value="Femme"> <span>Femme</span>
+                 </div>
+              
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Ajouter votre CV</label>
+                    <input class="form-control" type="file" id="formFile" (change)="onselectcv($event)">
+                  </div>
+                <div class="btn">
+                    <button (click)="onsubmit()">Insicription</button>
+                                    </div>
+                
+            </form>
+            </body>
+          
+        </div>
+ 
+    </div>
+</section>

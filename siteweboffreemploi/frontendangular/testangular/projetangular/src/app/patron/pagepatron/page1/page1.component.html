@@ -1,0 +1,87 @@
+<app-header></app-header>
+<body>
+<div class="b">
+  <div class="navbar">
+    <form [formGroup]="formsignin">
+      <ul>
+         
+        <li>
+          <div>
+            <label for="">Spécialité</label><br>
+            <select  class="select" (change)="onselect($event)">
+              <option value="1">Choisir votre Spécilalité</option>
+              <option value="cuisiner">Cuisinier</option>
+              <option value="serveur">Serveur</option>
+            </select>
+          </div>
+     
+      
+        </li>
+        <li>
+          <div>
+            <label for="">Gouvernerat</label><br>
+            <select  class="select" (change)="onselectreg($event)">
+              <option value="1">choisir votre Gouvernerat</option>
+              <option value="ariana">Ariana</option>
+              <option value="sidibouzid">sidibouzid</option>
+            </select>
+          </div>
+    
+        </li>
+    
+        <li>
+          <div>
+            <label for="">Sexe</label><br>
+            <select  class="select" (change)="onselectsexe($event)">
+              <option value="1">Choisir votre Sexe</option>
+              <option value="Homme">Homme</option>
+              <option value="Femme">Femme</option>
+              <option value="tous">tous</option>
+            </select>
+          </div>
+          </li>
+    
+      </ul>
+    
+    </form>
+      </div>
+      <button class="button" (click)="onsubmit()">
+        <div class="icon">
+          <i class='bx bx-search'></i>
+        </div>
+      </button>
+</div>
+ 
+</body>
+<div class="e">
+  <p class="eror">{{resultat}}</p>
+</div>
+<section>
+  
+  <div class="employee">
+
+  <button (click)="consulter(emp.id)" *ngFor="let emp of emps">
+      
+    <div class="card">
+      <div class="ico">
+       <div>
+          <img src="assets\{{emp.filee.titlefile}}" alt="">
+       </div>
+  
+      </div>
+      <div class="info">
+        <p class="nom">{{emp.nom}}</p>
+          <p class="num">{{emp.num}}</p>
+          <p class="num">{{emp.city}}</p>
+      </div>
+    </div>
+  </button>
+  
+  
+  
+ 
+
+  </div>
+</section>
+<app-footer></app-footer>
+
